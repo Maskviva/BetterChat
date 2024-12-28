@@ -22,7 +22,7 @@
 */
 
 const { GUI, selectGUI } = require("./BetterChat/modules/gui");
-const { getConfigData, getPlayerData, updatePlayerData } = require("./BetterChat/modules/data");
+const { getConfigData, getPlayerData, updatePlayerData, apiParsing } = require("./BetterChat/modules/data");
 const event = require("./BetterChat/modules/event");
 const Prefix = getConfigData('config', "Prefix");
 const { PAPI } = require(`./GMLIB-LegacyRemoteCallApi/lib/BEPlaceholderAPI-JS.js`);
@@ -83,3 +83,4 @@ mc.listen("onServerStarted", () => {
 ll.exports(updatePlayerData,'BetterChat_updataPlayersData','updata_BetterChat_PlayersData');
 ll.exports(getPlayerData,'BetterChat_getPlayerData','get_BetterChat_PlayerData');
 ll.exports(GUI,'BetterChat_mainGUI','BetterChat_mainGUI');
+ll.exports(apiParsing,'BetterChat_apiParsing','BetterChat_apiParsing');

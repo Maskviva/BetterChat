@@ -24,6 +24,8 @@
 const { getConfigData, getPlayerData, updatePlayerData, apiParsing } = require("./data");
 
 mc.listen("onChat", (player, msg) => {//玩家消息
+    if (player.isSimulatedPlayer()) return; // 忽略模拟玩家
+    
     const playerObj = getPlayerData(player.realName); // 获取玩家数据对象
 
     if (getConfigData('forbiddenWords').includes(msg)) { // 检查消息是否包含违禁词
@@ -47,6 +49,7 @@ mc.listen("onChat", (player, msg) => {//玩家消息
 
 // 监听玩家加入游戏事件
 mc.listen('onPreJoin', (player) => {
+    if (player.isSimulatedPlayer()) return; // 忽略模拟玩家
     let playerObj = getPlayerData(player.realName); // 获取玩家数据
 
     let playerData = playerObj || { // 如果玩家数据不存在，则创建一个新的玩家数据对象

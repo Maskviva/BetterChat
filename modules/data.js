@@ -161,6 +161,8 @@ function getPlayerList() {
 setInterval(() => {
     const players = mc.getOnlinePlayers(); // 获取在线玩家对象数组
     players.forEach(player => { // 遍历玩家对象数组
+        if (player.isSimulatedPlayer()) return; // 忽略模拟玩家
+        
         let playerObj = getPlayerData(player.realName); // 获取玩家数据对象
         let displayName = playerObj.chat_bubbles // 使用 replace 方法替换字符串中的占位符
             .replace(/\{player_name}/g, `${playerObj.nick}§r`)

@@ -1,3 +1,22 @@
 {
-    "data": []
+    "data": [
+        {
+            "name": "BattingBoot6802",
+            "nick": "BattingBoot6802",
+            "title": null,
+            "message": "a",
+            "time": 0,
+            "chat_format": "{player_titles}<{player_name}> {player_msg}",
+            "chat_bubbles": "{player_titles}{player_name}"
+        },
+        {
+            "name": "RSxiaotong",
+            "nick": "aaaa",
+            "title": null,
+            "message": "a",
+            "time": 0,
+            "chat_format": "{player_titles}<{player_name}> {player_msg}",
+            "chat_bubbles": "{player_titles}{player_name}"
+        }
+    ]
 }
